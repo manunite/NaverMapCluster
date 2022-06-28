@@ -1,0 +1,61 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name NaverMapClusterFramework
+import CoreGraphics
+import CoreLocation
+import Foundation
+import NMapsMap
+@_exported import NaverMapClusterFramework
+import RxSwift
+import Swift
+import UIKit
+import _Concurrency
+public struct MapPoint {
+}
+extension CoreLocation.CLLocationCoordinate2D {
+  public var mapPoint: NaverMapClusterFramework.MapPoint {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class ClusterItemQuadItem : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public class NonHierarchicalDistanceBasedAlgorithm {
+  convenience public init(clusterDistancePoints: Swift.Int)
+  public init()
+  @objc deinit
+}
+public class DefaultClusterIconGenerator {
+  public init()
+  public func iconForSize(size: Swift.Int) -> UIKit.UIImage?
+  @objc deinit
+}
+public protocol markerProtocol {
+  var storeName: Swift.String { get set }
+  var latitude: CoreGraphics.CGFloat { get set }
+  var longitude: CoreGraphics.CGFloat { get set }
+  var clusterHandler: (() -> ())? { get set }
+}
+public class DefaultClusterRenderer {
+  public init()
+  public func update()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ClusterItem : ObjectiveC.NSObject {
+  public var position: CoreLocation.CLLocationCoordinate2D?
+  public var markerInfo: NaverMapClusterFramework.markerProtocol?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ClusterManager : ObjectiveC.NSObject {
+  convenience public init(mapView: NMapsMap.NMFNaverMapView)
+  @objc deinit
+  public func cluster()
+  public func add(_ item: NaverMapClusterFramework.ClusterItem)
+  public func setMoveCameraWithMarker(isMove: Swift.Bool)
+  @objc override dynamic public init()
+}
+extension NaverMapClusterFramework.ClusterManager : NMapsMap.NMFMapViewCameraDelegate {
+  @objc dynamic public func mapView(_ mapView: NMapsMap.NMFMapView, cameraDidChangeByReason reason: Swift.Int, animated: Swift.Bool)
+}

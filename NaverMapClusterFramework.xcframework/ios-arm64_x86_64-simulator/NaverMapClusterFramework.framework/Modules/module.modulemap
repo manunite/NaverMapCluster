@@ -1,0 +1,11 @@
+framework module NaverMapClusterFramework {
+  umbrella header "NaverMapClusterFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module NaverMapClusterFramework.Swift {
+    header "NaverMapClusterFramework-Swift.h"
+    requires objc
+}
