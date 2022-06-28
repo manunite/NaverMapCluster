@@ -1,5 +1,4 @@
 import XCTest
-import NaverMapCluster
 
 class Tests: XCTestCase {
     
