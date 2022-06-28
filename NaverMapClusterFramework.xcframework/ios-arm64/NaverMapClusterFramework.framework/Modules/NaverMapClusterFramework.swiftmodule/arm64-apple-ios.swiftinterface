@@ -35,7 +35,7 @@ public protocol markerProtocol {
   var markerName: Swift.String { get set }
   var latitude: CoreGraphics.CGFloat { get set }
   var longitude: CoreGraphics.CGFloat { get set }
-  var clusterHandler: (() -> ())? { get set }
+  var markerHandler: (() -> ())? { get set }
 }
 public class DefaultClusterRenderer {
   public init()
