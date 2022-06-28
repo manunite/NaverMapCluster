@@ -27,6 +27,13 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    if let infoDic: [String: Any] = Bundle.main.infoDictionary {
+      if let naverMapKey: String = infoDic["NMFClientId"] as? String {
+          // 네이버 지도 API Key값 입력.
+        assert(!naverMapKey.isEmpty)
+        }
+    }
+    
     self.view.addSubview(naverMapView)
     naverMapView.snp.makeConstraints { make in
       make.edges.equalTo(self.view)
@@ -70,10 +77,10 @@ class ViewController: UIViewController {
     return Double(arc4random()) / Double(UINT32_MAX) * 2.0 - 1.0
   }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
 
 }
 
