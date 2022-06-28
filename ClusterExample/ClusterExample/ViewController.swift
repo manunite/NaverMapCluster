@@ -1,9 +1,8 @@
 //
 //  ViewController.swift
-//  NaverMapCluster
+//  ClusterExample
 //
-//  Created by heomm123@naver.com on 06/28/2022.
-//  Copyright (c) 2022 heomm123@naver.com. All rights reserved.
+//  Created by heogj123 on 2022/06/29.
 //
 
 import UIKit
@@ -12,6 +11,7 @@ import NMapsMap
 import SnapKit
 
 class ViewController: UIViewController {
+  
   struct marker: markerProtocol {
     var markerName: String = ""
     var latitude: CGFloat = 0.0
@@ -24,32 +24,17 @@ class ViewController: UIViewController {
   
   var clusterManager: ClusterManager?
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    if let infoDic: [String: Any] = Bundle.main.infoDictionary {
-      if let naverMapKey: String = infoDic["NMFClientId"] as? String {
-          // 네이버 지도 API Key값 입력.
-        assert(!naverMapKey.isEmpty)
-        }
-    }
-    
+    // Do any additional setup after loading the view.
     self.view.addSubview(naverMapView)
     naverMapView.snp.makeConstraints { make in
       make.edges.equalTo(self.view)
     }
     
-    // 클러스터 매니저 생성시 Naver지도 객체를 전달.
     clusterManager = ClusterManager.init(mapView: self.naverMapView)
-    
-    
-    // 마커를 선택했을때 그 마커의 중앙으로 이동할것인지에 대한 설정.
-//    clusterManager?.setMoveCameraWithMarker(isMove: true)
-    
-    // 예제를 위해 임의의 클러스터 생성
     generateClusterItems()
-    
-    // 클러스터링 진행
     clusterManager!.cluster()
   }
 
@@ -66,7 +51,7 @@ class ViewController: UIViewController {
       let item = ClusterItem.init()
       item.markerInfo = marker.init(markerName: "\(idx)", latitude: lat, longitude: lng, markerHandler: { [weak self] in
         NSLog("클릭클릭 \(lat) - \(lng)")
-        // 마커 클릭했을때의 동작 구현.
+        // 마커에대한 동작 구현.
       })
       item.position = position
       clusterManager!.add(item)
@@ -76,11 +61,6 @@ class ViewController: UIViewController {
   private func randomScale() -> Double {
     return Double(arc4random()) / Double(UINT32_MAX) * 2.0 - 1.0
   }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 }
 

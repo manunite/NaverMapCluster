@@ -1,0 +1,53 @@
+PODS:
+  - NaverMapCluster (0.1.5):
+    - NMapsMap
+    - RxBlocking
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+  - NMapsMap (3.15.0)
+  - RxBlocking (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - NaverMapCluster (from `https://github.com/manunite/NaverMapCluster.git`, tag `0.1.5`)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - NMapsMap
+    - RxBlocking
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+
+EXTERNAL SOURCES:
+  NaverMapCluster:
+    :git: https://github.com/manunite/NaverMapCluster.git
+    :tag: 0.1.5
+
+CHECKOUT OPTIONS:
+  NaverMapCluster:
+    :git: https://github.com/manunite/NaverMapCluster.git
+    :tag: 0.1.5
+
+SPEC CHECKSUMS:
+  NaverMapCluster: 91b3c4010eb0808c4bcbcb385c84edd178194ea8
+  NMapsMap: f151761c088d6516064c59da03ab6503769486e6
+  RxBlocking: 04b5fd28bb5ea49f7d64b80db8bbfe50d9cc1c7d
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 94fdc20771dc4e720e140d62d7ac45af9cca6874
+
+COCOAPODS: 1.11.2
