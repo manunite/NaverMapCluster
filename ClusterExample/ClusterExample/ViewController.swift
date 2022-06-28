@@ -28,6 +28,14 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
+    
+    if let infoDic: [String: Any] = Bundle.main.infoDictionary {
+      if let naverMapKey: String = infoDic["NMFClientId"] as? String {
+          // 네이버 지도 API Key값 입력.
+        assert(!naverMapKey.isEmpty)
+        }
+    }
+
     self.view.addSubview(naverMapView)
     naverMapView.snp.makeConstraints { make in
       make.edges.equalTo(self.view)
