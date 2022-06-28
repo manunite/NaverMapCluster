@@ -32,7 +32,7 @@ public class DefaultClusterIconGenerator {
   @objc deinit
 }
 public protocol markerProtocol {
-  var storeName: Swift.String { get set }
+  var markerName: Swift.String { get set }
   var latitude: CoreGraphics.CGFloat { get set }
   var longitude: CoreGraphics.CGFloat { get set }
   var clusterHandler: (() -> ())? { get set }
