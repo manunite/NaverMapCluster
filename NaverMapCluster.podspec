@@ -39,4 +39,5 @@ Pod::Spec.new do |s|
   s.dependency   'RxCocoa'
   s.dependency   'RxRelay'
   s.dependency   'RxBlocking'
+  
 end
