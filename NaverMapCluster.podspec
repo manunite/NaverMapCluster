@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NaverMapCluster'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'iOS 네이버 지도에서 클러스터링 기능을 사용할수있는 라이브러리.'
 
 # This description is used to generate tags and improve search results.
