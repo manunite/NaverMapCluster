@@ -74,7 +74,7 @@ NaverMapCluster is available through [CocoaPods](https://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'NaverMapCluster'
+pod 'NaverMapCluster', :git => 'https://github.com/manunite/NaverMapCluster.git', :tag => '0.1.5'
 ```
 
 ## Author
