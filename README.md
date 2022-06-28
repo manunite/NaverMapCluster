@@ -7,7 +7,6 @@
 
 ## Example
 네이버지도 API에서 클러스터링을 사용할수있는 라이브러리입니다.
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
 
