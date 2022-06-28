@@ -13,7 +13,7 @@ import SnapKit
 
 class ViewController: UIViewController {
   struct marker: markerProtocol {
-    var storeName: String = ""
+    var markerName: String = ""
     var latitude: CGFloat = 0.0
     var longitude: CGFloat = 0.0
     
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
       let lng = kCameraLongitude + extent * randomScale()
       let position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
       let item = ClusterItem.init()
-      item.markerInfo = marker.init(storeName: "\(idx)", latitude: lat, longitude: lng, clusterHandler: { [weak self] in
+      item.markerInfo = marker.init(markerName: "\(idx)", latitude: lat, longitude: lng, clusterHandler: { [weak self] in
         NSLog("클릭클릭 \(lat) - \(lng)")
         // 마커 클릭했을때의 동작 구현.
       })
