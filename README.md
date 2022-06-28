@@ -8,9 +8,10 @@
 ## Description
 
 네이버지도 API에서 클러스터링을 사용할수있는 라이브러리입니다.
+
 <img src="./image1.jpeg" width="333" height="720"/>
-![](./image2.jpeg){: width="333" height="720"}
-![](./image3.jpeg){: width="333" height="720"}
+<img src="./image2.jpeg" width="333" height="720"/>
+<img src="./image3.jpeg" width="333" height="720"/>
 
 ## Example
 예제는 해당 Repository의 Example폴더 내 예제 프로젝트 참고.
