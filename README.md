@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/NaverMapCluster.svg?style=flat)](https://cocoapods.org/pods/NaverMapCluster)
 
 ## Example
-
+네이버지도 API에서 클러스터링을 사용할수있는 라이브러리입니다.
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
@@ -22,7 +22,7 @@ pod 'NaverMapCluster'
 
 ## Author
 
-heomm123@naver.com, heogj123@tmon.co.kr
+heogj123@gmail.co.kr
 
 ## License
 
