@@ -40,7 +40,7 @@ struct marker: markerProtocol { // markerProtocol을 상속받아 구조체 구�
     var latitude: CGFloat = 0.0 // 위도
     var longitude: CGFloat = 0.0 // 경도
     
-    var clusterHandler: (() -> ())? // 마커를 터치했을때 동작 정의할 핸들러
+    var markerHandler: (() -> ())? // 마커를 터치했을때 동작 정의할 핸들러
 }
 ```
 
@@ -53,7 +53,7 @@ let clusterItem = ClusterItem.init()
 
 let position = CLLocationCoordinate2D(latitude: lat, longitude: lng) // lat: 위도 , lng: 경도
 
-let markerInfo = marker.init(markerName: "\(idx)", latitude: lat, longitude: lng, clusterHandler: { [weak self] in
+let markerInfo = marker.init(markerName: "\(idx)", latitude: lat, longitude: lng, markerHandler: { [weak self] in
         // 마커 클릭했을때의 동작 구현.
       })
 
