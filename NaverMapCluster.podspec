@@ -21,22 +21,23 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/heomm123@naver.com/NaverMapCluster'
+  s.homepage         = 'https://github.com/manunite/NaverMapCluster'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'heomm123@naver.com' => 'heogj123@tmon.co.kr' }
-  s.source           = { :git => 'https://github.com/heomm123@naver.com/NaverMapCluster.git', :tag => s.version.to_s }
+  s.author           = { 'heomm123@naver.com' => 'heogj123@gmail.co.kr' }
+  s.source           = { :git => 'https://github.com/manunite/NaverMapCluster.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
+  s.vendored_frameworks = "NaverMapClusterFramework.xcframework"
 
-  s.source_files = 'NaverMapCluster/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'NaverMapCluster' => ['NaverMapCluster/Assets/*.png']
-  # }
+  s.platform = :ios
+  s.swift_version = "5.0"
+  s.ios.deployment_target  = '15.5'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency   'NMapsMap'
+  s.dependency   'RxSwift'
+  s.dependency   'RxCocoa'
+  s.dependency   'RxRelay'
+  s.dependency   'RxBlocking'
 end
